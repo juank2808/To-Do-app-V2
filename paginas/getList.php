@@ -4,12 +4,12 @@
     require_once('conexion/connect.php');
 
   try {
-        $sth =  $mbd->prepare ("SELECT * from listas;");
+        $sth=$mbd->prepare("SELECT * from tareas;");
         //mdb es la variable que nos permite la conexion a la base de datos esta en connect.php
         $sth->execute();
-        $result = $sth->fetchAll();
+        $result = $sth->fetchAll(PDO::FETCH_ASSOC);
         
-        print_r($result);
+      
     
         $mbd = null;
     } catch (PDOException $e) {
