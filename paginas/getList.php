@@ -9,9 +9,7 @@
         $sth->execute();
         $result = $sth->fetchAll(PDO::FETCH_ASSOC);
         
-      
-    
-        $mbd = null;
+     
     } catch (PDOException $e) {
         print "Error!: " . $e->getMessage() . "<br/>";
         die();
